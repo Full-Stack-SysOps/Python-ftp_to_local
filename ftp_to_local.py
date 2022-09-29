@@ -14,7 +14,7 @@ print(ftp.getwelcome())
 
 
 # List files in FTP
-local_path = '/home/Backup/Magrathea/'
+local_path = '/home/Backup/'
 
 local_files=os.listdir(local_path)
 
@@ -34,7 +34,7 @@ print("Downloading files from FTP ...")
 for new_file in ftp_files:
     ftp.retrbinary('RETR ' +new_file, open(local_path+new_file, 'w').write)
     
-print("files download to /home/Backup/Magrathea/")
+print("files download to /home/Backup/")
 
 #Close FTP connection
 print("Closing FTP connection ...")
